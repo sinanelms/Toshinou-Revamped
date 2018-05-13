@@ -2,12 +2,12 @@ class GeneralSettingsWindow {
   createWindow() {
     this.botSettingsWindow = WindowFactory.createWindow({
       width: 320,
-      text: "General"
+      text: "Genel"
     });
 
     let controls = [{
         name: 'palladium',
-        labelText: 'Palladium Bot',
+        labelText: 'Palladium Topla',
         appendTo: this.botSettingsWindow,
         event: function () {
           window.settings.palladium = this.checked;
@@ -23,7 +23,7 @@ class GeneralSettingsWindow {
       },*/
       {
         name: 'moveRandomly',
-        labelText: 'Move randomly',
+        labelText: 'Rastgele dolaş',
         appendTo: this.botSettingsWindow,
         event: function () {
           window.settings.moveRandomly = this.checked;
@@ -31,7 +31,7 @@ class GeneralSettingsWindow {
       },
       {
         name: 'npcKiller',
-        labelText: 'Kill NPCs',
+        labelText: 'NPC kes',
         appendTo: this.botSettingsWindow,
         event: function () {
           window.settings.killNpcs = this.checked;
@@ -39,7 +39,7 @@ class GeneralSettingsWindow {
       },
       {
         name: 'fleeFromEnemy',
-        labelText: 'Flee from enemy',
+        labelText: 'Düşmandan kaç',
         appendTo: this.botSettingsWindow,
         event: function () {
           window.settings.fleeFromEnemy = this.checked;
@@ -47,7 +47,7 @@ class GeneralSettingsWindow {
       },
       {
         name: 'avoidAttackedNpcs',
-        labelText: 'Avoid attacked NPCs<br>(Dont use with PET)',
+        labelText: 'Saldurılan NPClerden kaçın<br>(PET ile kullanmayın)',
         appendTo: this.botSettingsWindow,
         event: function () {
           window.settings.avoidAttackedNpcs = this.checked;
@@ -55,7 +55,7 @@ class GeneralSettingsWindow {
       },
       {
         name: 'npcCircle',
-        labelText: 'Circle',
+        labelText: 'Daire çiz',
         appendTo: this.botSettingsWindow,
         event: function () {
           window.settings.circleNpc = this.checked;
@@ -63,7 +63,7 @@ class GeneralSettingsWindow {
       },
       {
         name: 'npcCircleRadius',
-        labelText: 'Circle radius <span> (500px)</span>',
+        labelText: 'Dairenin yarıçapı <span> (500px)</span>',
         type: 'range',
         appendTo: this.botSettingsWindow,
         labelBefore: true,
@@ -80,7 +80,7 @@ class GeneralSettingsWindow {
       },
       {
         name: 'dontCircleWhenHpBelow25Percent',
-        labelText: "Don't circle when HP < 25%",
+        labelText: " HP < 25% ise daire çizme ",
         appendTo: this.botSettingsWindow,
         event: function () {
           window.settings.dontCircleWhenHpBelow25Percent = this.checked;
@@ -88,7 +88,7 @@ class GeneralSettingsWindow {
       },
       {
         name: 'repairWhenHpIsLowerThanPercent',
-        labelText: ' Repair when HP < <span> (10%)</span>',
+        labelText: ' HP olduğundan tamir ol < <span> (10%)</span>',
         type: 'range',
         appendTo: this.botSettingsWindow,
         labelBefore: true,
@@ -105,7 +105,7 @@ class GeneralSettingsWindow {
       },
       {
         name: 'reviveAtGate',
-        labelText: 'Revive at the nearest gate',
+        labelText: 'En yakın portalda canlan',
         appendTo: this.botSettingsWindow,
         event: function () {
           window.settings.reviveAtGate = this.checked;
@@ -113,7 +113,7 @@ class GeneralSettingsWindow {
       },
       {
         name: 'reviveLimit',
-        labelText: 'Revive limit <span> (5)</span>',
+        labelText: 'Canlanma limiti <span> (5)</span>',
         type: 'range',
         appendTo: this.botSettingsWindow,
         labelBefore: true,

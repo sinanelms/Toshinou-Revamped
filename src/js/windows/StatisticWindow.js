@@ -3,7 +3,7 @@ class StatisticWindow {
   createWindow() {
     this.botStatisticWindow = WindowFactory.createWindow({
       width: 320,
-      text: "Statistic"
+      text: "İstitastik"
     });
     this.connected = false;
 
@@ -24,13 +24,13 @@ class StatisticWindow {
 
     let options = [{
         name: 'startTime',
-        labelText: 'Start at: ',
+        labelText: 'Başlangıç: ',
         spanText: this.stats.startTime.toLocaleString(navigator.languages[0]),
         appendTo: this.botStatisticWindow
       },
       {
         name: 'credits',
-        labelText: 'Credits: ',
+        labelText: 'Kredi: ',
         spanText: '0',
         appendTo: this.botStatisticWindow
       },
@@ -42,43 +42,43 @@ class StatisticWindow {
       },
       {
         name: 'energy',
-        labelText: 'GG Energy: ',
+        labelText: 'GG Enerji: ',
         spanText: '0',
         appendTo: this.botStatisticWindow
       },
       {
         name: 'ammo',
-        labelText: 'Ammo: ',
+        labelText: 'Cephane: ',
         spanText: '0',
         appendTo: this.botStatisticWindow
       },
       {
         name: 'experience',
-        labelText: 'Experience: ',
+        labelText: 'Tecrübe Puanı: ',
         spanText: '0',
         appendTo: this.botStatisticWindow
       },
       {
         name: 'honor',
-        labelText: 'Honor: ',
+        labelText: 'Şeref: ',
         spanText: '0',
         appendTo: this.botStatisticWindow
       },
       {
         name: 'rank',
-        labelText: 'Rank Points: ',
+        labelText: 'Rütbe Puanı: ',
         spanText: '0',
         appendTo: this.botStatisticWindow
       },
       {
         name: 'death',
-        labelText: 'Death count: ',
+        labelText: 'Ölüm sayısı: ',
         spanText: '0',
         appendTo: this.botStatisticWindow
       },
       {
         name: 'speed',
-        labelText: 'Speed: ',
+        labelText: 'Kazanç: ',
         spanText: '0.00 uri/min.',
         appendTo: this.botStatisticWindow
       }
@@ -87,7 +87,7 @@ class StatisticWindow {
     if (window.globalSettings.showRuntime) {
       options.push({
         name: 'runtime',
-        labelText: 'Runtime: ',
+        labelText: 'Başlama: ',
         spanText: '00:00:00',
         appendTo: this.botStatisticWindow
       });
@@ -98,7 +98,7 @@ class StatisticWindow {
     });
 
     this.resetBtn = ControlFactory.btn({
-      labelText: 'Reset',
+      labelText: 'Sıfırla',
       appendTo: ControlFactory.emptyDiv(this.botStatisticWindow)
     });
 

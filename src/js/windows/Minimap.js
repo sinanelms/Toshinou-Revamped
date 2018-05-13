@@ -6,7 +6,7 @@ class Minimap {
   createWindow() {
     this.minimap = WindowFactory.createWindow({
       width: 320,
-      text: "Minimap"
+      text: "Mini Harita"
     });
 
     this.canvas = jQuery("<canvas/>", {

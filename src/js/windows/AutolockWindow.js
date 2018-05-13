@@ -2,12 +2,12 @@ class AutolockWindow {
   createWindow() {
     this.autolockWindow = WindowFactory.createWindow({
       width: 320,
-      text: "Autolocker"
+      text: "Oto Saldırı"
     });
 
     let options = [{
         name: 'lockNpcs',
-        labelText: 'Autolock NPCs (key: x)',
+        labelText: 'NPClere Kilitlen (tuş: x)',
         appendTo: this.autolockWindow,
         event: function () {
           window.settings.lockNpcs = this.checked;
@@ -15,7 +15,7 @@ class AutolockWindow {
       },
       {
         name: 'lockPlayers',
-        labelText: 'Autolock Players (key: z)',
+        labelText: 'Kullanıcılara Kilitlen (tuş: z)',
         appendTo: this.autolockWindow,
         event: function () {
           window.settings.lockPlayers = this.checked;
@@ -23,7 +23,7 @@ class AutolockWindow {
       },
       {
         name: 'autoAttack',
-        labelText: 'Attack locked target',
+        labelText: 'Kilitli Hedefe Saldır',
         appendTo: this.autolockWindow,
         event: function () {
           window.settings.autoAttack = this.checked;
